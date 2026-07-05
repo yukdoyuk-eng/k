@@ -35,3 +35,36 @@ export interface CuratedSpot {
   customReviews?: CustomReview[];
   imageUrl?: string;
 }
+
+export interface FestivalEvent {
+  id: string;
+  season: 'spring' | 'summer' | 'autumn' | 'always';
+  seasonLabel: string;
+  period: string;
+  title: string;
+  date: string;
+  location: string;
+  description: string;
+  features: string;
+  partners: string[];
+  drawbacks: string;
+  parkingInfo: string;
+  navigationPath: string;
+}
+
+export interface PresetCourseStep {
+  baseStartOffset: number;
+  duration: number;
+  spotId: number;
+  spotName: string;
+  guide: string;
+}
+
+export interface PresetCourse {
+  id: string;
+  title: string;
+  gu: 'DONGNAM' | 'SEOBUK' | 'ALL';
+  vibe: string;
+  baseStart: string;
+  steps: PresetCourseStep[];
+}
